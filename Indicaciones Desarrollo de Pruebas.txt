@@ -1,0 +1,5 @@
+Para la revision de la prueba se debe tener en cuenta lo siguiente:
+1. Se desarrollaron los cuestionarios resaltando en negrilla las respuestas.
+2. la prueba tecnica de Sql se desarrollo en el archivo de SQL que va adjunto.
+3. La aplicacion contiene el backup de la base de datso con los respectivos procedimientos almacenados 
+creados para manipular los datos de la aplicacion.

@@ -1,0 +1,54 @@
+﻿@model List<VentasTotalesModel>
+@{
+    ViewData["Title"] = "Pagina de Inicio";
+}
+
+<div class="text-center">
+    <div class="card">
+        <div class="card-header">
+            <h1 class="display-4">Bienvenido al sistema de inventario Productos Asenet</h1>
+        </div>
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            Lista de Ventas
+        </div>
+        <div class="card-body">
+            <a asp-action="ProductoMasVendido" asp-controller="Home" class="btn btn-success"><i class="bi bi-plus-circle"></i> Ver Producto mas Vendido</a>
+            <a asp-action="ProductoMenosVendido" asp-controller="Home" class="btn btn-success"><i class="bi bi-plus-circle"></i> Ver Producto menos Vendido</a>
+            <a asp-action="VentaProducto" asp-controller="Home" class="btn btn-success"><i class="bi bi-plus-circle"></i> Realizar Venta o Pedido</a>
+            <a asp-action="Index" asp-controller="Home" class="btn btn-success"><i class="bi bi-plus-circle"></i>Ventas Totales</a>
+
+            <hr />
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Tipo Transaccion</th>
+                        <th>Cliente</th>
+                        <th>Fecha</th>
+                        <th>Cantidad</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Nombre_Producto</td>
+                            <td>@item.Tipo_Venta</td>
+                            <td>@item.Nombre</td>
+                            <td>@item.Fecha_venta</td>
+                            <td>@item.Cantidad</td>
+                            <td>@item.Valor_Venta</td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
