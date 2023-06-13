@@ -5,7 +5,7 @@ namespace AplicacionAsenet.Models.DataBase
 {
     public class ConexionDb
     {
-        private SqlConnection Conexion = new SqlConnection("Server=DESKTOP-VQTGT9N\\SQLEXPRESS;DataBase= db_AppTalyCap;Integrated Security=true");
+        private SqlConnection Conexion = new SqlConnection("Server=DESKTOP-VQTGT9N\\SQLEXPRESS;DataBase= db_AppAsenet;Integrated Security=true");
         public SqlConnection AbrirConexion()
         {
             if (Conexion.State == ConnectionState.Closed)
